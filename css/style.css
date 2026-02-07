@@ -15,7 +15,11 @@ body {
     margin: 0 auto;
 
 }
-
+.main-container {
+    width: 100%;
+    margin: 0px auto;
+    padding-bottom: 50px;
+}
 .header {
     padding: 20px;
     height: 125px;
@@ -57,6 +61,25 @@ nav {
     text-align: left;
 
 }
+.profile{
+    background-color: #333333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: #F2A2E8 inset 2px;
+    text-align: left;
+    height: 600px;
+}
+
+.profile p {
+    margin: 20px;
+    padding-left: 200px;
+}
+
+.elerhetoseg {
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
 a {
     color: #ffffff;
@@ -81,17 +104,41 @@ a {
     background-color: #87CEEB;
     color: #000080;
     text-shadow: #000000 4px 4px 10px;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.link:active {
+    background-color: #87CEEB;
+    color: #000080;
+    text-shadow: #000000 4px 4px 10px;
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
 }
 
 .homework-img {
     width: 40%;
     height: auto;
     margin: 20px 10px;
-    border: #F2A2E8 double 2px;
+    border: #87CEEB double 2px;
+    border-radius: 8%;
     float: right;
     margin-left: 20px;
     margin-bottom: 10px;
     max-width: 200px;
+}
+.homework-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border: #F2A2E8 double 4px;
+}
+.profile-img {
+    max-width: 150px;
+    margin: 20px 10px;
+    border: #F2A2E8 double 2px;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
 }
 
 .kontener::after {
@@ -113,6 +160,13 @@ h2 {
     text-shadow: #000080 2px 2px 10px;
 }
 
+h3 {
+    margin: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    text-shadow: #000080 2px 2px 10px;
+}
+
 p {
     font-size: 16px;
     line-height: 1.6;
@@ -125,16 +179,19 @@ p {
     width: 50px;
     height: 50px;
     position: fixed;
-    bottom: 60px;
+    bottom: 8px;
     right: 20px;
-    opacity: 0.9;
+    
 }
 
 footer {
     background-color: #333333;
     text-align: center;
     font-size: 14px;
-    padding: 20px;
     border-top: #87CEEB ridge 2px;
     width: 100%;
+        padding: 0px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
 }
