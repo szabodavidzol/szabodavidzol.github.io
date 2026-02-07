@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+.header {
+    padding: 20px;
+    height: 125px;
+    text-align: center;
+    background-color: #87CEEB;
+}
+
+nav {
+    background-color: #333333;
+    margin-bottom: 20px;
+    border: #F2A2E8 outset 2px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    padding: 20px;
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #555555;
+    color: #728FCE;
+    text-shadow: #000080 4px 4px 10px;
+}
+
+.homework {
+    background-color: #333333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: #F2A2E8 inset 2px;
+    text-align: left;
+
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-shadow: #000080 4px 4px 10px;
+}
+
+.link {
+    width: 20%;
+    padding: 10px 0px;
+    margin: 15px;
+    border: #ffffff solid 2px;
+    background-color: #728FCE;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.link:hover {
+    background-color: #87CEEB;
+    color: #000080;
+    text-shadow: #000000 4px 4px 10px;
+}
+
+.homework-img {
+    width: 40%;
+    height: auto;
+    margin: 20px 10px;
+    border: #F2A2E8 double 2px;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    max-width: 200px;
+}
+
+.kontener::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h1 {
+    font-size: 42px;
+    text-shadow: #000080 2px 2px 10px;
+    padding: 20px 0px;
+}
+
+h2 {
+    margin: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    text-shadow: #000080 2px 2px 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px;
+    text-shadow: #000080 2px 2px 10px;
+
+}
+
+.up-img {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    opacity: 0.9;
+}
+
+footer {
+    background-color: #333333;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+    border-top: #87CEEB ridge 2px;
+    width: 100%;
+}

@@ -1,0 +1,102 @@
+body{
+    background-image: url("../img/bg_01.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    color: #ffffff;
+}
+/* Navigácios sáv stílusa */
+  #navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    padding-top: 10px;
+    background-color: #0000008f;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    font-weight: bold;
+    font-size: 25px;
+    border-bottom: 1px solid #0096ff66;
+    box-shadow: 0 0 20px #008cff4d;
+}
+    #navbar a {
+     color: #7dd3ff;
+     text-decoration: none;
+     padding: 0px 10px;
+     border-radius: 6px;
+     position: relative;
+     transition: 0.3s ease;
+}
+
+    #navbar a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #00b4ff;
+    background: rgba(0, 140, 255, 0.15);
+    box-shadow: 
+      0 0 8px #00aaff,
+      0 0 20px #0088ff;
+    border: 1px solid #00aaff;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 100px;
+    color: #00b4ff;
+    text-shadow: #0094c6 0px 0px 10px;
+}
+h2 {
+    text-align: center;
+    font-size: 40px;
+    margin: 50px;
+    color: #00b4ff;
+    text-shadow: #0094c6 0px 0px 10px;
+}
+a {
+    color: #7dd3ff;
+    text-decoration: none;
+    margin: 20px;
+}
+p {
+    text-align: left;
+    font-size: 25px;
+    margin: 50px;
+    line-height: 1.6;
+}
+/*jobbra igazított képek stílusai*/
+.right-image {
+    float: right;
+    width: 400px;
+    margin: 0 40px 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #008cff4d;
+}
+/*balra igazított kép stílusai*/
+.left-image {
+    float: left;
+    width: 400px;
+    margin: 0 40px 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #008cff4d;
+}
+/*portré képek stílusa*/   
+.portre-image {
+    float: left;
+    width: 140px;
+    margin-left: 75px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #008cff4d;
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    margin: 10px 0 ;
+}
+ 

@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-image: url(../img/header.jpg);
+    background-color: #444;
+    color: white;
+    padding: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-weight: bold;
+    text-align: center;
+}
+footer{
+    background-color: #444;
+    color: white;
+    padding: 40px;
+    margin-top: 100px ;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+    
+}
+main#page {
+    background-color: #0000008b;
+    max-width: 80%;
+    padding: 20px;
+    margin: 10px auto;
+    color: #fff;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+h1{
+    font-size: 50px;
+    color: red;
+    text-shadow: 2px 2px #444;
+    background-color: #ffffff81;
+    display: inline;
+    border: 1px solid brown;
+    border-radius: 20%;
+}
+h2{
+    font-size: 40px;
+    padding: 20px 0;
+    background-color: #444;
+}
+
+/* Navigation Bar Styles */
+nav ul {
+    list-style-type: none;
+    background-color: royalblue;
+    width: 100%;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 26px;
+}
+
+nav ul li a:hover {
+    background-color: deepskyblue;
+    
+}
+nav ul li a.active{
+    background-color: blue;
+}
+
+.float-right {
+    float: right;
+}
+/* Navigation Bar Styles END */
+
+body{
+    background-color: darkcyan;
+}
+
+li{
+    font-size: 20px;
+    margin: 10px 0;
+}
+ul{
+    list-style-type: none;
+    padding: 2px;
+}
+
+p{
+    margin: 5px 0;
+}
+
+.welcome-message {
+    background-color: #217589;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    font-size: 28px;
+    color: #fff;
+    
+}
+.specials-section {
+    background-color: #217589;
+    max-width: 50%;
+    padding: 20px;
+    margin: 50px auto;
+    color: #fff;
+    text-align: center;
+}
+
+.about-us{
+    background-color: #444;
+    max-width: 80%;
+    height: 220px;
+    padding: 20px;
+    margin: 50px auto;
+    color: #fff;
+    text-align: center;
+}
+
+.oszlop_2{
+    background-color: darkslategrey;
+    width: 48%;
+    height: 110px;
+    float: left;
+    padding: 1%;
+    text-align: center;
+    margin: 1%;
+}
+
+
+.menu-section {
+    background-color: #217589;
+    float: left;
+    width: 31.33%;
+    padding: 1%;
+    text-align: center;
+    margin: 1%;
+    align-items: stretch;
+}
+.drink-section {
+    background-color: #217589;
+    float: left;
+    width: 46%;
+    padding: 2%;
+    text-align: center;
+    margin: 2%;
+}
+.images{
+    width: 100%;
+    max-height: 450px;
+    margin: 10px 0;
+}
+.up-img{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.9;
+}
