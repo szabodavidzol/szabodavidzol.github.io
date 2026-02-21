@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <title>Strandolás | Prooktatás házifeladat 6</title>
+</head>
+
+<body>
+  <div id="content">
+    <header>
+        
+    </header>
+
+    
+        <aside>
+            <a href="#balaton">Balaton</a>
+            <a href="#tisza-to">Tisza-tó</a>
+            <a href="#szelidi-to">Szelidi-tó</a>
+            <h2>Kérem töltse ki a jelentkezési űrlapot</h2>
+            <form action="">
+                <label for="name">Név:</label>
+                <input type="text" id="name" name="name" required placeholder="Teszt Elek">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="teszt.elek@gmail.com">
+
+                <label for="phone">Telefonszám:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+36 30 123 4567">
+
+                <label for="destination">Melyik tó érdekli? </label>
+                <select id="destination" name="destination" required>
+                    <option value="balaton">Balaton</option>
+                    <option value="tisza-to">Tisza-tó</option>
+                    <option value="szelidi-to">Szelidi-tó</option>
+                </select>
+                <label for="accommodation">Milyen szállást keres? </label>
+
+                <label for="szalloda">Szálloda</label>
+                <input type="checkbox" id="szalloda" name="accommodation" value="szalloda">
+
+                <label for="apartman">Apartmanház</label>
+                <input type="checkbox" id="apartman" name="accommodation" value="apartman">
+
+                <label for="kemping">Kemping</label>
+                <input type="checkbox" id="kemping" name="accommodation" value="kemping">
+
+                <label for="meal">Milyen ellátás legyen?</label>
+
+                <label for="teljes">Teljes</label>
+                <input type="radio" id="teljes" name="meal" value="teljes">
+                <label for="felpanzio">Fél panzió</label>
+                <input type="radio" id="felpanzio" name="meal" value="felpanzio">
+                <label for="reggeli">Csak reggeli</label>
+                <input type="radio" id="reggeli" name="meal" value="reggeli">
+                <label for="nincs">Nem kérek</label>
+                <input type="radio" id="nincs" name="meal" value="nincs">
+
+                <label for="message">Egyéb üzenet:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Ide írhatja az üzenetét..."></textarea>
+
+                <button type="submit">Mehet</button>
+            </form>
+
+        </aside>
+        <main>
+        <section id="balaton">
+            <h2>Balaton</h2>
+            <img src="img/balaton_640x.jpg" alt="Balaton" class="image-responsive">
+            <p>A Balaton Magyarország legnagyobb tava, és az egyik legnépszerűbb nyári üdülőhely. A strandjai minden
+                korosztály számára kellemes kikapcsolódást nyújtanak. A sekély, gyorsan felmelegedő víz különösen a
+                kisgyermekes családok számára ideális. A déli part strandjai homokosabbak és lassan mélyülnek, míg az
+                északi parton több a köves, kavicsos partszakasz. A Balaton partján számos jól felszerelt strand
+                található, ahol büfék, csúszdák és sportolási lehetőségek várják a látogatókat. Nyáron sokan napoznak,
+                úsznak vagy vízibicikliznek a tóban. A strandokon gyakran rendeznek programokat, koncerteket és
+                sportversenyeket is. A naplemente a Balaton partján különösen szép látványt nyújt. A Balaton strandjai
+                ezért minden évben rengeteg turistát vonzanak belföldről és külföldről egyaránt.</p>
+
+        </section>
+        <section id="tisza-to">
+            <h2>Tisza-tó</h2>
+            <img src="img/tiszato_640x.jpg" alt="Tisza-tó" class="image-responsive">
+            <p>A Tisza-tó Magyarország második legnagyobb tava, amely kedvelt nyári üdülőhely. Strandjai tiszták és
+                rendezettek, sok látogatót vonzanak minden évben. A tó vize nyáron gyorsan felmelegszik, ezért kellemes
+                fürdőzést biztosít. A sekélyebb partszakaszok miatt a kisgyermekes családok számára is ideális
+                választás. A strandokon büfék, játszóterek és sportolási lehetőségek is megtalálhatók. Sokan
+                vízibicikliznek, kajakoznak vagy csónakáznak a tavon. A természet közelsége különleges hangulatot ad a
+                pihenésnek. A környéken kerékpárutak is találhatók, így aktív kikapcsolódásra is van lehetőség. Nyáron
+                különböző programokat és rendezvényeket is szerveznek a parton. A Tisza-tó strandjai ideális helyszínt
+                biztosítanak a nyári feltöltődéshez.</p>
+
+        </section>
+        <section id="szelidi-to">
+            <h2>Szelidi-tó</h2>
+            <img src="img/szelidito_640x.jpg" alt="Szelidi-tó" class="image-responsive">
+            <p>A Szelidi-tó Bács-Kiskun vármegyében található, és népszerű üdülőhely. A tó vize nyáron kellemesen meleg,
+                ezért sokan választják strandolásra. A part mentén kiépített, gondozott strand várja a látogatókat. A
+                sekély víz miatt a gyermekek számára is biztonságos fürdőzési lehetőséget nyújt. A strand területén
+                büfék és pihenőhelyek is találhatók. A környék nyugodt és barátságos hangulatú. Nyáron kulturális és
+                szórakoztató programokat is rendeznek itt. Sokan napoznak, úsznak vagy vízi sportokat próbálnak ki a
+                tavon. A természet közelsége különleges élményt ad a látogatóknak. A Szelidi-tó strandja kiváló hely a
+                nyári pihenéshez és kikapcsolódáshoz.</p>
+        </section>
+    </main>
+ 
+    <footer>
+        <p>&copy; 2026 Szabó Dávid. Minden jog fenntartva.</p>
+    </footer>
+</div>
+</body>
+
+</html>

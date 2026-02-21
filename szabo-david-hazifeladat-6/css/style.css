@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    background-color: #d7b520;    
+}
+
+div#content {
+    width: 80%;
+    border: 2px solid #dddddd;
+    border-radius: 10px;
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    padding-right: 40px; /* miért kell jobra pluszba? */
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+    gap: 20px;
+}
+
+a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    background-color: #d7b520;
+    border-radius: 15px;
+    color: white;
+}
+
+p {
+    padding: 10px;
+}
+
+header {
+    background-image: url(../img/header_beach_640.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgb(217, 217, 217);
+    grid-area: header;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    height: 100px;
+    background-color: rgb(217, 217, 217);
+    grid-area: footer;
+}
+
+header,
+aside,
+section,
+footer {
+    border-radius: 25px;
+    border: 1px solid blue;
+}
+
+aside {
+    padding-top: 10px;
+    background-color: rgb(111, 168, 220);
+    grid-area: aside;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-style: italic;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 80px;
+}
+
+button {
+    margin: 15px 10%;
+    padding: 10px;
+    width: 80%;
+    background: #D7B520;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+
+}
+
+.image-responsive {
+    width: 30%; 
+    max-height: 100%;   
+    float: left;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 10px;
+
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 10px;
+    overflow: hidden;
+    grid-area: section;
+}
+
+h2 {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+section p {
+    display: inline;
+}
+
+#balaton {
+    background-color: rgb(244, 204, 204);
+    color: black;
+}
+
+#tisza-to {
+    background-color: rgb(255, 242, 204);
+    color: black;
+}
+
+#szelidi-to {
+    background-color: rgb(207, 226, 243);
+    color: black;
+    
+}
+
+@media (max-width: 768px) {
+    div#content {
+        grid-template-columns: 1fr;
+        grid-template-areas: "header" "aside" "main" "footer";
+    }
+
+    section .image-responsive {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px 0;
+    }
+}

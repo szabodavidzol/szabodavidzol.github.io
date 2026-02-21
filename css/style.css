@@ -2,6 +2,9 @@
     font-family: 'xirod';
     src: url('../font/xirod.otf') format('opentype');
 }
+html{
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
