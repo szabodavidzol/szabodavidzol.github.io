@@ -28,13 +28,13 @@
             <h2>Kérem töltse ki a jelentkezési űrlapot</h2>
             <form action="">
                 <label for="name">Név:</label>
-                <input type="text" id="name" name="name" required placeholder="Teszt Elek">
+                <input type="text" id="name" name="name" maxlength="40" required placeholder="Teszt Elek">
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="teszt.elek@gmail.com">
+                <input type="email" id="email" name="email" maxlength="50" required placeholder="teszt.elek@gmail.com">
 
                 <label for="phone">Telefonszám:</label>
-                <input type="tel" id="phone" name="phone" required placeholder="+36 30 123 4567">
+                <input type="tel" id="phone" name="phone" maxlength="11" required placeholder="+3601234567">
 
                 <label for="destination">Melyik tó érdekli? </label>
                 <select id="destination" name="destination" required>
@@ -65,7 +65,7 @@
                 <input type="radio" id="nincs" name="meal" value="nincs">
 
                 <label for="message">Egyéb üzenet:</label>
-                <textarea id="message" name="message" rows="4" placeholder="Ide írhatja az üzenetét..."></textarea>
+                <textarea id="message" name="message" rows="4" maxlength="100" placeholder="Ide írhatja az üzenetét..."></textarea>
 
                 <button type="submit">Mehet</button>
             </form>
