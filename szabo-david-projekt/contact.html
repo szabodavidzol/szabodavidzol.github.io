@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A Royal Castle Hotel egy luxus szálloda, amely a város szívében található. Kényelmes szobákat, kiváló szolgáltatásokat és lenyűgöző kilátást kínál a vendégeknek. Fedezze fel a város nevezetességeit, és élvezze a pihentető tartózkodást nálunk!">
+    <meta name="keywords"
+        content="Royal Castle Hotel, luxus szálloda, város szívében, kényelmes szobák, kiváló szolgáltatások, lenyűgöző kilátás, város nevezetességei, pihentető tartózkodás">
+    <!-- Google Fonts és egyéb ikonok -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Oldal címe -->
+    <title>Royal Castle Hotel | Kapcsolat </title>
+    <!-- Favicon és CSS -->
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header" id="home">
+        <!-- Navigációs sáv -->
+        <nav class="navbar">
+
+            <a href="index.html"><img src="img/logo.png" alt="Royal Castle Hotel logó" class="logo"></a>
+
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="rooms.html">Szobák</a></li>
+                <li><a href="services.html">Szolgáltatások</a></li>
+                <li><a href="contact.html" class="active">Kapcsolat</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+    <div class="container-contact">
+        <section class="rent">
+
+            <h2>Foglalás</h2>
+
+            <form class="rent-form">
+
+                <input type="text" id="name" placeholder="Név" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" maxlength="12" placeholder="Telefonszám" required>
+                <input type="date" id="arrival" min="2026-01-01" placeholder="Érkezés" required>
+                <input type="date" id="departure" placeholder="Távozás" required>
+                <select id="guests" name="guests" required>
+                    <option value="">Fő:</option>
+                    <option value="1">1 fő</option>
+                    <option value="2">2 fő</option>
+                    <option value="3">3 fő</option>
+                    <option value="4">4 fő</option>
+                    <option value="5">5 fő</option>
+                    <option value="6">6 fő</option>
+                </select>
+                <select id="kids" name="kids">
+                    <option value="">Gyermek:</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>                                        
+                </select>
+                <select id="roomtype" name="roomtype" required>
+                    <option value="">Szobatípus</option>
+                    <option value="standard">Standard</option>
+                    <option value="deluxe">Deluxe</option>
+                    <option value="family">Family</option>
+                    <option value="suite">Lakosztály</option>
+                </select>
+                <input type="text" id="coupon" placeholder="Kuponkód">
+                <textarea id="message" name="message" rows="4" placeholder="Egyébb megjegyzés.."></textarea>
+                <label for="terms">Elfogadom az áltatlános feltételeket:</label>
+                <input type="checkbox" id="terms" name="terms" required><br>
+                <label for="newsletter">Szeretnék hírlevelet kapni:</label>
+                <input type="checkbox" id="newsletter" name="newsletter"><br>
+                <button>Foglalás</button>
+
+            </form>
+
+        </section>
+
+        <section class="contact">
+
+            <h2>Kapcsolat</h2>
+
+            <form class="contact-form">
+
+                <input type="text" id="contact-name" placeholder="Név" required>
+                <input type="email" id="contact-email" placeholder="Email" required>
+
+                <textarea id="contact-message" placeholder="Üzenet"></textarea>
+
+                <button>Küldés</button>
+
+            </form>
+
+            <p><i class="fa-solid fa-phone"></i> <a href="tel:+3612345678">+36 1 234 5678</a></p>
+
+            <p><i class="fa-solid fa-envelope"></i> <a
+                    href="mailto:info@royalcastlehotel.hu">info@royalcastlehotel.hu</a></p>
+
+            <iframe src="https://www.google.com/maps?q=budapest&output=embed"></iframe>
+
+        </section>
+    </div>
+    <!-- Lábjegyzet -->
+    <footer>
+        <div class="container-footer">
+            <p>&copy; 2026 Royal Castle Hotel. Minden jog fenntartva.</p>
+            <ul class="social-media">
+                <li><a href="https://www.facebook.com/royalcastlehotel" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.twitter.com/royalcastlehotel" target="_blank"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/royalcastlehotel" target="_blank"><i
+                            class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <a href="#home" class="back-to-top"><i class="fa-solid fa-angle-up"></i></a>
+    </footer>
+</body>
+
+</html>

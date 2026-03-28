@@ -1,0 +1,532 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Prata', serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar styles */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+height: 100px;
+background:rgba(0, 0, 0, 0.5);
+animation: animeNavbar 1.5s ease forwards;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+@keyframes animeNavbar{
+0%{
+    opacity:0;
+    transform: translateY(-20px);
+}
+100%{
+    opacity:1;
+    transform: translateY(0);
+}
+}
+.navbar .logo{
+    height: 100%;
+}
+.navbar .logo:hover{
+transform: scale(1.2);
+transition: transform 0.3s ease;
+}
+.navbar ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+.navbar a{
+color:white;
+text-decoration:none;
+height: 100%;
+}
+.navbar a:hover{
+color:gold;
+text-shadow: #333 0px 5px 12px;
+}
+.navbar a.active{
+color:gold;
+text-shadow: #333 0px 5px 12px;
+}
+
+/* Hero section styles */
+.hero{
+height:100vh;
+background-image: url(../img/hero.jpg);
+background-size:cover;
+background-position:center;
+text-align:center;
+color:white;
+}
+
+.hero-text{
+    
+margin-top:200px;
+background-color: #333333b7;
+padding: 10px 15px;
+height: 250px;
+}
+
+.hero-text h1{
+font-size: 3.5rem;
+}
+
+.hero-text p{
+font-size: 1.2rem;
+margin:25px 0;
+}
+
+/* Button styles */
+.btn{
+background:gold;
+padding:12px 25px;
+margin-top: 50px;
+font-weight:600;
+text-transform:uppercase;
+text-decoration:none;
+color:black;
+border-radius:5px;
+}
+.btn:hover{
+background:darkgoldenrod;
+}
+.header{
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Rólunk szekció stílusai */
+.about{
+    padding:80px;
+    background:white;
+    box-shadow: #333 0px 0px 10px;
+    margin:20px;
+    border-radius:10px;
+    width: 50%;
+    animation: slideIn 1s ease forwards;
+}
+.about h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.about p{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.float-left{
+float:left;
+width:300px;
+margin: 0px 20px 20px 0;
+border-radius:10px;
+animation: slideIn 2s ease forwards;
+box-shadow: #333 0px 0px 15px;
+}
+@keyframes slideIn{
+0%{
+    opacity:0;
+    transform: translateX(-200px);
+}
+100%{
+    opacity:1;
+    transform: translateX(0);
+}
+}
+
+/* Services grid styles */
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
+gap:20px;
+text-align:center;
+margin-top:30px;
+}
+
+.services-grid i{
+font-size:40px;
+color:gold;
+}
+.services-grid .services-link{
+text-decoration:none;
+color:#333;
+}
+.services-grid .services-link:hover{
+color:gold;
+animation: pulse 1.5s ease forwards;
+}
+@keyframes pulse{
+0%{
+    opacity:0;    
+}
+100%{
+    opacity:1;    
+}
+}
+
+/* Elérhetőség szekció stílusai */
+.availability{
+    padding:80px;
+    background:white;
+    box-shadow: #333 0px 5px 10px;
+    margin:20px;
+    border-radius:10px;
+    width: 50%;
+    animation: slideInRight 1s ease forwards;
+}
+.availability h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.availability p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.availability ul{
+    list-style: none;
+    margin-top: 20px;
+}
+.float-right{
+float:right;
+width:300px;
+margin: 20px 0px 10px 20px;
+box-shadow: #333 0px 0px 15px;
+border-radius:10px;
+animation: slideInRight 2s ease forwards;
+}
+@keyframes slideInRight{
+0%{
+    opacity:0;
+    transform: translateX(200px);
+}
+100%{
+    opacity:1;
+    transform: translateX(0);
+}
+}
+.btn-2{
+    text-decoration: none;
+    color: white;
+    background-color: #222;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: absolute;
+}
+.btn-2:hover{
+    background-color: #333;
+    color: gold;
+    text-shadow: #cecece 0px 0px 8px;
+    box-shadow: #333 0px 5px 12px;
+}
+
+/*lábjegyzet stílusai*/
+footer{
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+footer p{
+    font-size: 14px;
+}
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+footer .social-media{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+footer .social-media a{
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.container-footer{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.back-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #222;
+    color: white;    
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;    
+}
+.back-to-top:hover{
+    background-color: #333;
+    color: gold;
+    text-shadow: #cecece 0px 5px 12px;    
+}
+/* Szobák szekció stílusai */
+.rooms{
+    padding: 60px 10%;
+    background:white;
+    box-shadow: #333 0px 5px 10px;
+    margin-top: 20px; 
+    margin-left: 10%;   
+    border-radius:10px;
+    width: 80%;
+    text-align: center;
+}
+.rooms h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.rooms h3{
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.rooms p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.room-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: start;
+}
+.room-card{
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: #333 0px 10px 25px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.room-card img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+.room-card:hover{
+    box-shadow: #333 0px 5px 15px;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+.hide-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease;
+    
+}
+.room-card.active .hide-content {
+    max-height: 200px;
+    padding-bottom: 15px;
+    
+}
+
+
+/* Kapcsolat szekció konténer stílusai */
+.container-contact{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+}
+
+/* Bérlés szekció stílusai */
+.rent{
+    padding: 80px;
+    background:white;
+    box-shadow: #333 0px 5px 10px;
+    margin:20px;
+    border-radius:10px;
+    width: 50%;
+}
+.rent h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.rent p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.rent-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    width: 100%;   
+}
+.rent-form input, .rent-form select, .rent-form textarea{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 90%;
+}
+.rent-form input:hover, .rent-form select:hover, .rent-form textarea:hover{
+    border-color: #333;
+    box-shadow: #333 0px 0px 8px;
+}
+.rent-form input:focus, .rent-form select:focus, .rent-form textarea:focus{
+    border-color: #333;
+    box-shadow: #333 0px 0px 8px;
+    
+}
+.rent-form input[type="checkbox"]{
+    width: auto;
+    margin-right: 10px;
+}
+.rent-form button{
+    padding: 10px;
+    width: 30%;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.rent-form button:hover{
+    background-color: #333;
+    color: gold;
+    text-shadow: #cecece 0px 5px 12px;
+    box-shadow: #333 0px 5px 12px;
+}
+.rent-form #terms, .rent-form #newsletter{
+    margin-top: 10px;    
+}
+
+
+/* Kapcsolat szekció stílusai */
+.contact{
+    padding:50px;
+    background:white;
+    box-shadow: #333 0px 5px 10px;
+    margin:20px;
+    border-radius:10px;
+    width: 50%;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+.contact h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.contact a{
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.contact form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+.contact form input, .contact form textarea{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact form button{
+    padding: 10px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.contact form button:hover{
+    background-color: #333;
+    color: gold;
+    text-shadow: #cecece 0px 5px 12px;
+    box-shadow: #333 0px 5px 12px;
+}
+
+
+
+/* Responsive styles */
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+}
+.container{
+flex-direction:column;
+}
+.logo{
+margin-top: -10px;
+}
+.about, .availability{
+width:100%;
+margin:20px 0;
+}
+.about h2, .availability h2{
+font-size: 2rem;
+}
+.float-left, .float-right{
+float:none;
+width:100%;
+}
+.hero-text h1{
+font-size: 1.8rem;
+}
+.hero-text p{
+font-size: 1rem;
+margin: 15px 0;
+}
+.hero-text .btn{
+padding: 10px 20px;
+font-size: 0.9rem;
+}
+.rooms{
+width:100%;
+margin:20px 0;}
+.room-container{
+grid-template-columns: 1fr;
+}
+}
