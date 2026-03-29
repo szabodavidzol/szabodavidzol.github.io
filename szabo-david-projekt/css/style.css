@@ -561,14 +561,15 @@ footer .social-media a {
     overflow: hidden;
     animation: slideIn 1s ease forwards;
 }
+
 /* Kapcsolat szekció konténer stílusai */
 .container-contact {
     width: 80%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 20px;
+        
 }
 
 /* Bérlés szekció stílusai */
@@ -578,7 +579,7 @@ footer .social-media a {
     box-shadow: #333 0px 5px 10px;
     margin: 20px;
     border-radius: 10px;
-    width: 50%;
+    width: 80%;
 }
 
 .rent h2 {
@@ -654,7 +655,6 @@ footer .social-media a {
     margin-top: 10px;
 }
 
-
 /* Kapcsolat szekció stílusai */
 .contact {
     padding: 50px;
@@ -662,7 +662,8 @@ footer .social-media a {
     box-shadow: #333 0px 5px 10px;
     margin: 20px;
     border-radius: 10px;
-    width: 50%;
+    width: 100%;
+    height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -697,6 +698,11 @@ footer .social-media a {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+.contact form input:hover,
+.contact form textarea:hover {
+    border-color: #333;
+    box-shadow: #333 0px 0px 8px;
+}
 
 .contact form button {
     padding: 10px;
@@ -714,8 +720,22 @@ footer .social-media a {
     text-shadow: #cecece 0px 5px 12px;
     box-shadow: #333 0px 5px 12px;
 }
-
-
+.contact p {
+    font-size: 1.2rem;
+    margin: 20px 0;    
+}
+.contact p i {
+    font-size: 20px;
+    color: gold;
+    margin-right: 10px;
+}
+iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+}
 
 /* Responsive styles */
 @media(max-width:768px) {
@@ -801,6 +821,24 @@ footer .social-media a {
          margin: 20px 0;
          overflow: hidden;
      }
-     
+     .container-contact {
+         grid-template-columns: 1fr;
+     }
+      .rent {
+          width: 100%;
+          margin: 20px 0;
+          padding: 20px;
+      }
+         .rent h2 {
+              font-size: 2rem;
+         }
+         .contact {
+              width: 100%;
+              margin: 20px 0;
+              padding: 20px;
+         }
+          .contact h2 {
+              font-size: 2rem;
+         }
 
 }
