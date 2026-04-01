@@ -271,6 +271,46 @@ body {
     box-shadow: #333 0px 5px 12px;
 }
 
+.feedback {
+    padding: 80px;
+    background: white;
+    box-shadow: #333 0px 5px 10px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+}
+.feedback h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.feedback p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+.feedback .feedback-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: start;
+}
+.feedback .feedback-item {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: #333 0px 10px 25px;
+    margin-bottom: 20px;
+}
+.feedback .feedback-item:hover {
+    box-shadow: #333 0px 5px 15px;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+
 /*lábjegyzet stílusai*/
 footer {
     background-color: #222;
@@ -589,9 +629,10 @@ footer .social-media a {
 }
 
 .rent p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 20px;
+    font-style: italic;
 }
 
 .rent-form {
@@ -653,6 +694,14 @@ footer .social-media a {
 .rent-form #terms,
 .rent-form #newsletter {
     margin-top: 10px;
+}
+
+.guests-kids {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; 
+    width: 90%;
+    justify-content: center;
 }
 
 /* Kapcsolat szekció stílusai */
@@ -721,7 +770,7 @@ footer .social-media a {
     box-shadow: #333 0px 5px 12px;
 }
 .contact p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 20px 0;    
 }
 .contact p i {

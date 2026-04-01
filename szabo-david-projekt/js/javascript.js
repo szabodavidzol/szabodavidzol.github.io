@@ -1,3 +1,4 @@
+// Kártyák
 const cards = document.querySelectorAll('.room-card');
 
 cards.forEach(card => {
@@ -11,9 +12,7 @@ cards.forEach(card => {
     });
 });
 
-
-
-
+// Slideshow
 function nextImage(slideshow) {
     const images = slideshow.querySelectorAll('img');
 
@@ -28,4 +27,32 @@ function nextImage(slideshow) {
 
     let nextIndex = (currentIndex + 1) % images.length;
     images[nextIndex].classList.remove('hide');
+}
+
+// Kapcsolat űrlap
+function contactFunction() {
+    if (document.getElementById("contact-name").value == "" ||
+        document.getElementById("contact-email").value == "" ||
+        document.getElementById("contact-message").value == "") {
+        alert("Kérem, töltse ki az összes mezőt!");
+        return;
+    }
+    alert("Köszönjük, hogy kapcsolatba lépett velünk! Hamarosan felvesszük Önnel a kapcsolatot.");
+}
+
+// Foglalás űrlap
+function rentFunction() {
+    if (document.getElementById("name").value == "" ||
+        document.getElementById("email").value == "" ||
+        document.getElementById("arrival").value == "" ||
+        document.getElementById("departure").value == "" ||
+        document.getElementById("guests").value == "" ||
+        document.getElementById("roomtype").value == "") {
+        alert("Kérem, töltse ki az összes mezőt!");
+        return;
+    } else if (!document.getElementById("terms").checked) {
+        alert("Kérem, fogadja el a feltételeket!");
+        return;
+    }
+    alert("Köszönjük, hogy lefoglalta a szobát! Hamarosan felvesszük Önnel a kapcsolatot.");
 }
