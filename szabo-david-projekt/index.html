@@ -11,7 +11,8 @@
     <!-- Google Fonts és egyéb ikonok -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Prata&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Oldal címe -->
     <title>Royal Castle Hotel | Főoldal </title>
@@ -27,10 +28,25 @@
 
             <a href="index.html"><img src="img/logo.png" alt="Royal Castle Hotel logó" class="logo"></a>
 
-            <ul>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="menu">
                 <li><a href="index.html">Főoldal</a></li>
                 <li><a href="szobak.html">Szobák</a></li>
-                <li><a href="szolgaltatas.html">Szolgáltatások</a></li>
+                <li class="dropdown"><a href="szolgaltatas.html"><i class="fa-solid fa-angle-down"></i>
+                        Szolgáltatások</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="szolgaltatas.html#restaurant">Étterem</a></li>
+                        <li><a href="szolgaltatas.html#spa">Wellness</a></li>
+                        <li><a href="szolgaltatas.html#fitness">Fitness</a></li>
+                        <li><a href="szolgaltatas.html#pool">Medence</a></li>
+                    </ul>
+                </li>
                 <li><a href="kapcsolat.html">Kapcsolat</a></li>
             </ul>
 
@@ -125,7 +141,7 @@
             </p>
 
             <p>
-                További információért és foglalásért:
+                További információért:
             </p>
 
             <a href="kapcsolat.html" class="btn-2">Kattintson Ide</a>
@@ -135,32 +151,86 @@
 
     </div>
     <section class="feedback">
-        <h2>Visszajelzések</h2>      
+        <h2>Visszajelzések</h2>
         <p>
             Vendégeink visszajelzései alapján folyamatosan fejlesztjük szolgáltatásainkat,
             hogy mindenki számára felejthetetlen élményt nyújtsunk.
         </p>
-            <div class="feedback-container">
-            <div class="feedback-item">
-        <p><i class="fa-solid fa-quote-left"></i>
-            Kiváló helyen, gyönyörű kilátással és fantasztikus szolgáltatásokkal rendelkező szálloda. Mindenkinek
-            ajánlom! - Anna K.<i class="fa-solid fa-quote-right"></i>
-        </p>
-        <img src="img/feedback/feedback1.jpg" alt="Vendég visszajelzés" class="feedback-image">
-            </div>
-            <div class="feedback-item">
-        <p><i class="fa-solid fa-quote-left"></i>
-            A személyzet rendkívül barátságos és segítőkész volt. A szoba tiszta és kényelmes, a reggeli pedig
-            fantasztikus! - Péter L.<i class="fa-solid fa-quote-right"></i>
-        </p>
-        <img src="img/feedback/feedback2.jpg" alt="Vendég visszajelzés" class="feedback-image">
-            </div>
-            <div class="feedback-item">
-        <p><i class="fa-solid fa-quote-left"></i>
-            Nagyszerű élmény volt a R.C. Hotelben tartózkodni. Minden részletre odafigyeltek, és a
-            szolgáltatások kiválóak voltak. - Eszti <i class="fa-solid fa-quote-right"></i>
-        </p>
-        <img src="img/feedback/feedback3.jpg" alt="Vendég visszajelzés" class="feedback-image">
+
+        <div class="feedback-container">
+
+            <div class="feedback-track">
+
+                <div class="feedback-item"><!--Az eredeti 4 visszajelzés (1)-->
+                    <p><i class="fa-solid fa-quote-left"></i>
+                        Kiváló helyen, gyönyörű kilátással és fantasztikus szolgáltatásokkal rendelkező szálloda.
+                        Mindenkinek
+                        ajánlom! - Anna K.<i class="fa-solid fa-quote-right"></i>
+                    </p>
+                    <img src="img/feedback/feedback1.jpg" alt="Vendég visszajelzés" class="feedback-image">
+                </div>
+
+                <div class="feedback-item"><!--Az eredeti 4 visszajelzés (2)-->
+                    <p><i class="fa-solid fa-quote-left"></i>
+                        A személyzet rendkívül barátságos és segítőkész volt. A szoba tiszta és kényelmes, a reggeli
+                        pedig
+                        fantasztikus! - Péter L.<i class="fa-solid fa-quote-right"></i>
+                    </p>
+                    <img src="img/feedback/feedback2.jpg" alt="Vendég visszajelzés" class="feedback-image">
+                </div>
+
+                <div class="feedback-item"><!--Az eredeti 4 visszajelzés (3)-->
+                    <p><i class="fa-solid fa-quote-left"></i>
+                        Nagyszerű élmény volt a R.C. Hotelben tartózkodni. Minden részletre odafigyeltek, és a
+                        szolgáltatások kiválóak voltak. - Eszti <i class="fa-solid fa-quote-right"></i>
+                    </p>
+                    <img src="img/feedback/feedback3.jpg" alt="Vendég visszajelzés" class="feedback-image">
+                </div>
+
+                <div class="feedback-item"><!--Az eredeti 4 visszajelzés (4)-->
+                    <p><i class="fa-solid fa-quote-left"></i>
+                        A szálloda elhelyezkedése tökéletes, a wellness részleg pedig fantasztikus volt. Mindenkinek
+                        ajánlom, aki egy pihentető és luxus élményre vágyik! - Gábor M.<i
+                            class="fa-solid fa-quote-right"></i>
+                    </p>
+                    <img src="img/feedback/feedback4.jpg" alt="Vendég visszajelzés" class="feedback-image">
+                </div>
+
+                <!-- Duplikált visszajelzések a végtelen görgetéshez -->
+                <div class="feedback-item"><!--Duplikált visszajelzés (1)-->
+                    <p><i class="fa-solid fa-quote-left"></i>
+                        Kiváló helyen, gyönyörű kilátással és fantasztikus szolgáltatásokkal rendelkező szálloda.
+                        Mindenkinek
+                        ajánlom! - Anna K.<i class="fa-solid fa-quote-right"></i>
+                    </p>
+                    <img src="img/feedback/feedback1.jpg" alt="Vendég visszajelzés" class="feedback-image">
+                </div>
+
+                <div class="feedback-item"><!--Duplikált visszajelzés (2)-->
+                    <p><i class="fa-solid fa-quote-left"></i>
+                        A személyzet rendkívül barátságos és segítőkész volt. A szoba tiszta és kényelmes, a reggeli
+                        pedig
+                        fantasztikus! - Péter L.<i class="fa-solid fa-quote-right"></i>
+                    </p>
+                    <img src="img/feedback/feedback2.jpg" alt="Vendég visszajelzés" class="feedback-image">
+                </div>
+
+                <div class="feedback-item"><!--Duplikált visszajelzés (3)-->
+                    <p><i class="fa-solid fa-quote-left"></i>
+                        Nagyszerű élmény volt a R.C. Hotelben tartózkodni. Minden részletre odafigyeltek, és a
+                        szolgáltatások kiválóak voltak. - Eszti <i class="fa-solid fa-quote-right"></i>
+                    </p>
+                    <img src="img/feedback/feedback3.jpg" alt="Vendég visszajelzés" class="feedback-image">
+                </div>
+
+                <div class="feedback-item"><!--Duplikált visszajelzés (4)-->
+                    <p><i class="fa-solid fa-quote-left"></i>
+                        A szálloda elhelyezkedése tökéletes, a wellness részleg pedig fantasztikus volt. Mindenkinek
+                        ajánlom, aki egy pihentető és luxus élményre vágyik! - Gábor M.<i
+                            class="fa-solid fa-quote-right"></i>
+                    </p>
+                    <img src="img/feedback/feedback4.jpg" alt="Vendég visszajelzés" class="feedback-image">
+                </div>
             </div>
         </div>
     </section>

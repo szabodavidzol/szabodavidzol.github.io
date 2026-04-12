@@ -11,7 +11,7 @@
     <!-- Google Fonts és egyéb ikonok -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Prata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Oldal címe -->
     <title>Royal Castle Hotel | Szolgáltatások </title>
@@ -28,10 +28,24 @@
 
             <a href="index.html"><img src="img/logo.png" alt="Royal Castle Hotel logó" class="logo"></a>
 
-            <ul>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="menu">
                 <li><a href="index.html">Főoldal</a></li>
                 <li><a href="szobak.html">Szobák</a></li>
-                <li><a href="szolgaltatas.html" class="active">Szolgáltatások</a></li>
+                <li class="dropdown"><a href="szolgaltatas.html" class="active"><i class="fa-solid fa-angle-down"></i> Szolgáltatások</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="szolgaltatas.html#restaurant">Étterem</a></li>
+                        <li><a href="szolgaltatas.html#spa">Wellness</a></li>
+                        <li><a href="szolgaltatas.html#fitness">Fitness</a></li>
+                        <li><a href="szolgaltatas.html#pool">Medence</a></li>
+                    </ul>
+                </li>
                 <li><a href="kapcsolat.html">Kapcsolat</a></li>
             </ul>
 
@@ -73,29 +87,31 @@
                 <div id="spa">
                     <i class="fa-solid fa-spa"></i>
                     <h3>Spa és wellness</h3>
-                    <img src="img/services/spa.jpg" alt="Spa" class="services-images-left">
+                    <p>Nyitvatartás: 10:00 - 20:00</p> 
+                    <div class="services-container">
+                    <img src="img/services/spa.jpg" alt="Spa" class="services-images">
 
-                    <p>Relaxáljon a szaunában, élvezze a masszázsokat és a szépségápolási kezeléseket.</p>
-                    <p>Nyitvatartás: 10:00 - 20:00</p>
-                    <img src="img/services/massage.jpg" alt="Spa masszázs" class="services-images-right">
-
-                    <p>Szauna és masszázs részlegünk a teljes kikapcsolódás és feltöltődés helyszíne.
+                    <p>Relaxáljon a szaunában, élvezze a masszázsokat és a szépségápolási kezeléseket.
+                        Szauna és masszázs részlegünk a teljes kikapcsolódás és feltöltődés helyszíne.
                         Modern szaunáink segítenek a stressz oldásában és a test méregtelenítésében.
                         Szakképzett masszőreink különböző kezelésekkel gondoskodnak a testi-lelki harmóniáról.
                         Nyugodt, igényes környezetben biztosítjuk vendégeink számára a pihenés élményét.
                         Látogasson el hozzánk, és tapasztalja meg a valódi wellness élményt!</p>
+
+                    <img src="img/services/massage.jpg" alt="Spa masszázs" class="services-images">
+
+                    </div>
                 </div>
 
                 <div id="fitness">
                     <i class="fa-solid fa-dumbbell"></i>
                     <h3>Fitneszközpont</h3>
-                    <img src="img/services/fitness_1.jpg" alt="Fitneszközpont" class="services-images-left">
-
-                    <p>Tartsa formában magát modern felszerelésekkel és személyi edző szolgáltatással.</p>
                     <p>Nyitvatartás: 06:00 - 22:00</p>
-                    <img src="img/services/fitness_2.jpg" alt="Fitneszközpont gépek" class="services-images-right">
+                    <div class="services-container">
+                    <img src="img/services/fitness_1.jpg" alt="Fitneszközpont" class="services-images">
 
-                    <p>Fitneszközpontunkban a legmodernebb kardio- és erősítőgépek állnak rendelkezésére, hogy
+                    <p>Tartsa formában magát modern felszerelésekkel és személyi edző szolgáltatással.
+                        Fitneszközpontunkban a legmodernebb kardio- és erősítőgépek állnak rendelkezésére, hogy
                         vendégeink
                         minden edzésigényét kielégítsük. Személyi edzőink segítenek egyéni edzésterv kialakításában,
                         hogy
@@ -103,22 +119,27 @@
                         energizáló
                         edzésekkel töltse meg napjait nálunk!</p>
 
+                    <img src="img/services/fitness_2.jpg" alt="Fitneszközpont gépek" class="services-images">
+
+                    </div>
+
                 </div>
 
                 <div id="pool">
                     <i class="fa-solid fa-water"></i>
                     <h3>Medence</h3>
-                    <img src="img/services/pool_1.jpg" alt="Medence Belső" class="services-images-left">
-
-                    <p>Merüljön el a fedett medencénkben, és élvezze a nyugodt környezetet.</p>
                     <p>Nyitvatartás: 08:00 - 20:00</p>
-                    <img src="img/services/pool_2.jpg" alt="Medence Külső" class="services-images-right">
+                    <div class="services-container">
+                    <img src="img/services/pool_1.jpg" alt="Medence Belső" class="services-images">
 
-                    <p>Fedett medencénk egész évben elérhető, így bármikor élvezheti a víz nyújtotta frissítő élményt. A
+                    <p>Merüljön el a fedett medencénkben, és élvezze a nyugodt környezetet.
+                        Fedett medencénk egész évben elérhető, így bármikor élvezheti a víz nyújtotta frissítő élményt. A
                         medence körül kényelmes napozóágyak és pihenőhelyek állnak rendelkezésére, hogy teljesen
                         kikapcsolódhasson. Víz alatti világításunk és hangrendszerünk különleges atmoszférát teremt, így
                         a medence használata nem csak felfrissülést, hanem egyedi élményt is nyújt vendégeink számára.
                     </p>
+                    <img src="img/services/pool_2.jpg" alt="Medence Külső" class="services-images">
+                    </div>
                 </div>
 
             <!--</div>-->

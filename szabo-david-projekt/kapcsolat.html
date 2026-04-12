@@ -11,7 +11,7 @@
     <!-- Google Fonts és egyéb ikonok -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Prata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Oldal címe -->
     <title>Royal Castle Hotel | Kapcsolat </title>
@@ -28,66 +28,43 @@
 
             <a href="index.html"><img src="img/logo.png" alt="Royal Castle Hotel logó" class="logo"></a>
 
-            <ul>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="menu">
                 <li><a href="index.html">Főoldal</a></li>
                 <li><a href="szobak.html">Szobák</a></li>
-                <li><a href="szolgaltatas.html">Szolgáltatások</a></li>
+                <li class="dropdown"><a href="szolgaltatas.html"><i class="fa-solid fa-angle-down"></i> Szolgáltatások</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="szolgaltatas.html#restaurant">Étterem</a></li>
+                        <li><a href="szolgaltatas.html#spa">Wellness</a></li>
+                        <li><a href="szolgaltatas.html#fitness">Fitness</a></li>
+                        <li><a href="szolgaltatas.html#pool">Medence</a></li>
+                    </ul>
+                </li>
                 <li><a href="kapcsolat.html" class="active">Kapcsolat</a></li>
             </ul>
 
         </nav>
 
     </header>
-    <div class="container-contact">
-        <section class="rent">
+    <main class="container-contact">
 
-            <h2>Foglalás</h2>
-
-            <form class="rent-form">
-
-                <input type="text" id="name" placeholder="Név*" required>
-                <input type="email" id="email" placeholder="Email*" required>
-                <input type="tel" id="phone" maxlength="12" placeholder="Tel:*+36301234567" required>
-                <input type="text" id="arrival" min="2026-01-01" placeholder="Érkezés*" onfocus="(this.type='date')" onblur="(this.type='text')" required>
-                <input type="text" id="departure" placeholder="Távozás*" onfocus="(this.type='date')" onblur="(this.type='text')" required>
-                <div class="guests-kids">
-                <select id="guests" name="guests" required>
-                    <option value="">Fő:*</option>
-                    <option value="1">1 fő</option>
-                    <option value="2">2 fő</option>
-                    <option value="3">3 fő</option>
-                    <option value="4">4 fő</option>
-                    <option value="5">5 fő</option>
-                    <option value="6">6 fő</option>
-                </select>
-                <select id="kids" name="kids">
-                    <option value="">Gyermek:</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-                </div>                
-                <select id="roomtype" name="roomtype" required>
-                    <option value="">Szobatípus*</option>
-                    <option value="standard">Standard</option>
-                    <option value="deluxe">Deluxe</option>
-                    <option value="family">Family</option>
-                    <option value="suite">Lakosztály</option>
-                </select>
-                <input type="text" id="coupon" placeholder="Kuponkód">
-                <textarea id="message" name="message" rows="4" placeholder="Egyébb megjegyzés.."></textarea>
-                <label for="terms">Elfogadom az áltatlános feltételeket:*</label>
-                <input type="checkbox" id="terms" name="terms" required><br>
-                <label for="newsletter">Szeretnék hírlevelet kapni:</label>
-                <input type="checkbox" id="newsletter" name="newsletter"><br>
-                <p>A * jelölt mezők kitöltése kötelező.</p>
-                <button onclick="rentFunction()">Foglalás</button>
-
-            </form>
-
-        </section>
-
+        <!-- hirdetés helye -->
+        <aside class="ad" > 
+            <h2>Hirdetés</h2>
+            <p>Hirdetési hely - Kiemelt ajánlatok és promóciók</p>
+            
+            <video id="myVideo" class="ad-video" autoplay muted loop>
+                <source id="videoSource" src="media/ad.mp4" type="video/mp4">
+            </video>
+            
+        </aside>
+        
         <section class="contact">
 
             <h2>Kapcsolat</h2>
@@ -115,7 +92,8 @@
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.8189338078964!2d19.041587576808528!3d47.493440595784215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc38fb52aa67%3A0x9dd8b764d96bfb6c!2sBudapest%2C%20V%C3%A1rkert%20rkp.%201%2C%201013!5e0!3m2!1shu!2shu!4v1774799168234!5m2!1shu!2shu"></iframe>
 
         </section>
-    </div>
+
+    </main>
     <!-- Lábjegyzet -->
     <footer>
         <div class="container-footer">

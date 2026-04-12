@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family: 'Prata', serif;
+    font-family: 'Cinzel Decorative', serif;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -54,7 +54,6 @@ body {
     list-style: none;
     gap: 20px;
 }
-
 .navbar a {
     color: white;
     text-decoration: none;
@@ -69,6 +68,89 @@ body {
 .navbar a.active {
     color: gold;
     text-shadow: #333 0px 5px 12px;
+}
+
+.dropdown {
+    position: relative;
+}
+.navbar .dropdown .dropdown-menu { /* Alapból rejtett almenüre vonatkozó stílus */
+    display: none;
+}
+.dropdown-menu {  
+    display: none;  
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    background-color: #444444e0;
+    min-width: 160px;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    z-index: 100;
+    display: none;
+}
+.dropdown-menu li a {
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+/* A TRÜKK: Egér ráhúzáskor megjelenik */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* Hamburger ikon elrejtése asztali nézeten */
+#menu-toggle { display: none; }
+
+/* Mobil nézet (pl. 768px alatt) */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 10;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+  }
+
+  .navbar .menu {
+    display: none; /* Alapesetben rejtve mobilomon */
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 30%;
+    background-color: #444444e4;
+    border-radius: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar .menu li {
+    padding: 8px 0;
+  }
+
+  .navbar .menu li a {
+
+    font-size: 1.4rem;
+  }
+
+  /* Ha a checkbox be van pipálva, mutassuk a menüt */
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
 }
 
 /* Hero section styles */
@@ -152,7 +234,7 @@ body {
 
 .float-left {
     float: left;
-    width: 300px;
+    width: 500px;
     margin: 0px 20px 20px 0;
     border-radius: 10px;
     animation: slideIn 2s ease forwards;
@@ -234,7 +316,7 @@ body {
 
 .float-right {
     float: right;
-    width: 300px;
+    width: 500px;
     margin: 20px 0px 10px 20px;
     box-shadow: #333 0px 0px 15px;
     border-radius: 10px;
@@ -278,36 +360,77 @@ body {
     margin: 20px;
     border-radius: 10px;
     width: 80%;
+    height: 600px;
     text-align: center;
     margin-left: 10%;
+    overflow: hidden;
 }
 .feedback h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 .feedback p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 20px;
     font-style: italic;
 }
-.feedback .feedback-container {
+.feedback-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     align-items: start;
+    overflow: hidden;
+    width: 100%;    
+    padding: 20px 0;
 }
-.feedback .feedback-item {
+.feedback-item {
     background-color: #f4f4f4;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: #333 0px 10px 25px;
-    margin-bottom: 20px;
+    margin: 20px;
+    flex: 0 0 300px;    
 }
-.feedback .feedback-item:hover {
+.feedback-item i{
+    font-size: 0.5rem;
+    
+}
+.feedback-item p {
+    font-size: 0.8rem;
+    
+}
+.feedback-item:hover {
     box-shadow: #333 0px 5px 15px;
     transform: translateY(-5px);
     transition: all 0.3s ease;
+}
+.feedback-image {
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 15px;
+    object-fit: cover;
+}
+.feedback-track {
+    display: flex;
+    width: max-content;
+    animation: loop-scroll 30s linear infinite;
+}
+/* Az animáció logikája */
+@keyframes loop-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        /* SZÁMÍTÁS: (300px + 20px) * 4 kártya = 1280px */
+        /* Pontosan 4 kártyányit toljuk el, hogy a 5. (másolat) pont az 1. helyére érjen */
+        transform: translateX(-1280px);
+    }
+}
+
+/* Megáll az animáció, ha rátolod az egeret */
+.feedback-container:hover .feedback-track {
+    animation-play-state: paused;
 }
 
 
@@ -368,13 +491,20 @@ footer .social-media a {
     text-shadow: #cecece 0px 5px 12px;
 }
 
+.main-container {
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    justify-content: center;
+}
+
 /* Szobák szekció stílusai */
 .rooms {
     padding: 60px 10%;
     background: white;
     box-shadow: #333 0px 5px 10px;
     margin-top: 20px;
-    margin-left: 10%;
+    margin-left: 10px;    
     border-radius: 10px;
     width: 80%;
     text-align: center;
@@ -512,15 +642,11 @@ footer .social-media a {
 }
 .services h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: gold;
-    text-shadow: #333 0px 5px 12px;    
+    margin-bottom: 20px;           
 }
 .services h3 {
     font-size: 2.2rem;
-    margin-bottom: 20px;
-    color: gold;
-    text-shadow: #333 0px 5px 12px;
+    margin-bottom: 20px;        
 }
 .services p {
     font-size: 1.2rem;
@@ -546,26 +672,21 @@ footer .social-media a {
     box-shadow: #333 0px 5px 15px;
     
 }
-.services-images-left {
+.services-container {
     width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: #333 0px 5px 15px;
-    float: left;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;    
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    
 }
-.services-images-right {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: #333 0px 5px 15px;
-    float: right;
-    margin-left: 20px;
-    margin-bottom: 20px;
+.services-container .services-images{
+    max-height: 450px;
+    object-fit: cover;
+
 }
+
 #restaurant {
     margin-top: 40px;
     background-color: #f0eeee;
@@ -604,13 +725,43 @@ footer .social-media a {
 
 /* Kapcsolat szekció konténer stílusai */
 .container-contact {
-    width: 80%;
+    
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
         
 }
+.ad{
+    background-color: #f0eeee;
+    width: 40%;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: #333 0px 5px 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.ad h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;    
+}
+.ad p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+.ad-video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: #333 0px 5px 15px;
+    object-fit: cover;
+    margin: 20px 0;
+}
+
 
 /* Bérlés szekció stílusai */
 .rent {
@@ -619,7 +770,8 @@ footer .social-media a {
     box-shadow: #333 0px 5px 10px;
     margin: 20px;
     border-radius: 10px;
-    width: 80%;
+    width: 30%;    
+    overflow: hidden;
 }
 
 .rent h2 {
@@ -675,13 +827,14 @@ footer .social-media a {
 
 .rent-form button {
     padding: 10px;
-    width: 30%;
+    width: auto;
     background-color: #222;
     color: white;
     border: none;
     border-radius: 5px;
     font-weight: 600;
     text-transform: uppercase;
+    
 }
 
 .rent-form button:hover {
@@ -711,7 +864,7 @@ footer .social-media a {
     box-shadow: #333 0px 5px 10px;
     margin: 20px;
     border-radius: 10px;
-    width: 100%;
+    width: 60%;
     height: 800px;
     display: flex;
     flex-direction: column;
@@ -786,6 +939,7 @@ iframe {
     margin-top: 15px;
 }
 
+
 /* Responsive styles */
 @media(max-width:768px) {
 
@@ -831,7 +985,35 @@ iframe {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
-
+    .feedback {
+        width: 100%;
+        margin: 20px 0;
+        padding: 20px;
+    }
+    .feedback h1 {
+        font-size: 1.5rem;
+    }
+    .feedback p {
+         font-size: 1rem;
+    }
+    .feedback-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .feedback-item {
+        width: 100%;
+        margin: 0 10px;
+    }
+    .feedback-item p {
+        font-size: 0.9rem;
+    }
+    .feedback-item i {
+        font-size: 20px;
+    }
+    .main-container {
+        flex-direction: column;
+    }
     .rooms {
         width: 100%;
         margin: 20px 0;
@@ -863,16 +1045,27 @@ iframe {
      .services i {
          font-size: 30px;
      }
-     .services-images,
-     .services-images-left,
-     .services-images-right {
+     .services-images{
          width: 100%;
          margin: 20px 0;
          overflow: hidden;
      }
+     .services-container {
+         flex-direction: column;
+     }
+     .services-container .services-images {
+         width: 100%;
+     }
      .container-contact {
          grid-template-columns: 1fr;
      }
+     .ad{
+        order: 1;
+        width: 100%;
+        margin-left: 0;
+     }
+     
+        
       .rent {
           width: 100%;
           margin: 20px 0;

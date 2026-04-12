@@ -1,3 +1,4 @@
+
 // Kártyák
 const cards = document.querySelectorAll('.room-card');
 
@@ -56,3 +57,27 @@ function rentFunction() {
     }
     alert("Köszönjük, hogy lefoglalta a szobát! Hamarosan felvesszük Önnel a kapcsolatot.");
 }
+
+function checkVideo() {
+  const video = document.getElementById('myVideo');
+  const source = document.getElementById('videoSource');
+  const currentSrc = source.getAttribute('src');
+  
+  // Ha 768px alatt vagyunk, legyen a mobil videó
+  if (window.innerWidth <= 768) {
+    if (currentSrc !== 'media/ad_3.mp4') {
+      source.setAttribute('src', 'media/ad_3.mp4');
+      video.load(); // Frissíteni kell a lejátszót!
+    }
+  } else {
+    // Ha felette, akkor az asztali
+    if (currentSrc !== 'media/ad.mp4') {
+      source.setAttribute('src', 'media/ad.mp4');
+      video.load();
+    }
+  }
+}
+
+// Figyeli az átméretezést és az oldalbetöltést
+window.addEventListener('resize', checkVideo);
+window.addEventListener('load', checkVideo);
