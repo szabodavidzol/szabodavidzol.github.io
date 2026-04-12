@@ -257,7 +257,7 @@ body {
 
 .float-left {
     float: left;
-    width: 500px;
+    width: 450px;
     margin: 0px 20px 20px 0;
     border-radius: 10px;
     animation: slideIn 2s ease forwards;
@@ -339,11 +339,28 @@ body {
 
 .float-right {
     float: right;
-    width: 500px;
+    width: 420px;
     margin: 20px 0px 10px 20px;
     box-shadow: #333 0px 0px 15px;
     border-radius: 10px;
     animation: slideInRight 2s ease forwards;
+}
+.reveal {
+   opacity: 0;
+    transform: translateY(80px);
+    transition: all 2s ease-out;   
+}
+.from-left {
+    transform: translateX(-100px);
+}
+.from-right {
+    transform: translateX(100px);
+}
+/* Amikor a JS hozzáadja a .visible osztályt */
+.reveal.visible {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
 }
 
 @keyframes slideInRight {
