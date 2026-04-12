@@ -3,7 +3,7 @@
 const cards = document.querySelectorAll('.room-card');
 
 cards.forEach(card => {
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (event) => {
 
         // MINDEN kártya bezárása
         cards.forEach(c => c.classList.remove('active'));
@@ -15,8 +15,9 @@ cards.forEach(card => {
 
 // Slideshow
 function nextImage(slideshow) {
-    const images = slideshow.querySelectorAll('img');
+    event.stopPropagation(); 
 
+    const images = slideshow.querySelectorAll('img');
     let currentIndex = 0;
 
     images.forEach((image, index) => {
@@ -58,6 +59,7 @@ function rentFunction() {
     alert("Köszönjük, hogy lefoglalta a szobát! Hamarosan felvesszük Önnel a kapcsolatot.");
 }
 
+// Videó váltás
 function checkVideo() {
   const video = document.getElementById('myVideo');
   const source = document.getElementById('videoSource');
