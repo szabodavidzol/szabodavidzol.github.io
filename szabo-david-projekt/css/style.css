@@ -143,8 +143,13 @@ body {
   }
 
   .navbar .menu li a {
-
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+  }
+  .navbar .dropdown .dropdown-menu {
+    display: none; /* Alapból rejtve mobilomon */
+  }
+  .navbar .dropdown i{
+    display: none;
   }
 
   /* Ha a checkbox be van pipálva, mutassuk a menüt */
