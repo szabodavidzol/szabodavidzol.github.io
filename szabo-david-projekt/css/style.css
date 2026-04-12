@@ -143,7 +143,7 @@ body {
   }
 
   .navbar .menu li a {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .navbar .dropdown .dropdown-menu {
     display: none; /* Alapból rejtve mobilomon */
@@ -1039,10 +1039,10 @@ iframe {
         gap: 20px;
     }
     .services h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
      .services h3 {
-         font-size: 1.5rem;
+         font-size: 1.2rem;
      }
      .services p {
          font-size: 1rem;
