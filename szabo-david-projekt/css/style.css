@@ -499,7 +499,6 @@ footer .social-media a {
 .main-container {
     display: flex;
     flex-direction: row;    
-    align-items: center;
     justify-content: center;
 }
 
@@ -776,7 +775,7 @@ footer .social-media a {
     margin: 20px;
     border-radius: 10px;
     width: 30%;    
-    overflow: hidden;
+    overflow: hidden;    
 }
 
 .rent h2 {
