@@ -131,7 +131,7 @@ body {
     position: absolute;
     top: 100px;
     right: 0;
-    width: 30%;
+    width: 45%;
     background-color: #444444e4;
     border-radius: 20px;
     flex-direction: column;
@@ -139,7 +139,7 @@ body {
   }
 
   .navbar .menu li {
-    padding: 8px 0;
+    padding: 10px 8px;
   }
 
   .navbar .menu li a {
@@ -1064,8 +1064,7 @@ iframe {
         width: 100%;
         margin-left: 0;
      }
-     
-        
+             
       .rent {
           width: 100%;
           margin: 20px 0;
