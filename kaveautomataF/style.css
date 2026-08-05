@@ -1,0 +1,176 @@
+.content {
+            display: flex;
+            gap: 50px;
+            padding: 20px;
+        }
+
+        #automata {
+            width: 300px;
+            height: 700px;
+            border: 5px solid #333;
+            background: #916a58;
+            padding: 20px;
+
+        }
+
+        #banner {
+            width: 100%;
+            height: 100px;
+            background-image: url('banner.jpg');
+            background-size: cover; 
+            border: 2px solid #333;
+            margin-bottom: 20px;           
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        #kijelzo {
+            background: #000;
+            color: #0f0;
+            border: 1px dotted #0f0;
+            height: 50px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #penztarca {
+            width: 150px;
+            height: 180px;
+            border: 2px dashed #666;
+            padding: 10px;
+            background: #d4ad87;
+        }
+
+        #penztarca h3 {
+            margin: 0px auto;
+        }
+
+        #penztarca p{
+            margin-top: 5px;
+        }
+
+        .erme {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: gold;
+            border: 1px solid #b8860b;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        #bedobo-rekesz {
+            width: 40px;
+            height: 40px;
+            background: #999;
+            background-image: url('coin_slot.jpg');
+            background-size: cover;
+            
+            margin-top: 20px;
+            margin-left: 250px;
+            cursor: pointer;
+        }
+        
+        #visszajaro-rekesz {
+            width: 80px;
+            height: 40px;
+            background: #999;
+            margin-top: 20px;
+            margin-left: 220px;
+            cursor: pointer;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #444;
+            color: #fff;
+            border: 1px thick double #929292;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #666;
+        }
+
+        button:active {
+            background: #222;
+        }
+
+        #kave-rekesz {
+            width: 120px;
+            height: 130px;
+            border: 2px solid #333;
+            background: #999;
+            margin-left: 25%;
+        }
+
+        .coffee-loader {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cup {
+            position: relative;
+            margin-top: 20px;
+            width: 80px;
+            height: 100px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border: 4px solid #fff;
+            overflow: hidden;
+            background-color: transparent;
+        }
+
+        .cup::after {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: 100%;
+            width: 15px;
+            height: 60px;
+            border: 4px solid #fff;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .coffee-empty {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 0%;
+            background-color: #6f4e37;
+        }
+
+        .coffee-liquid {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 0%;
+            background-color: #6f4e37;
+            animation: fillCup 3s ease-in-out forwards;
+        }      
+
+        @keyframes fillCup {
+            0% {
+                height: 0%;
+            }
+
+            50% {
+                height: 50%;
+            }
+
+            100% {
+                height: 80%;
+            }
+        }

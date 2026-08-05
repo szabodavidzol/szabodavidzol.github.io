@@ -1,9 +1,11 @@
 let egyenleg = 0;
 let visszajaro = 0;
-let penztarcaertek = 800;
+let penztarcaertek = 825;
 
 const drink = document.querySelector('.coffee-empty');
 const kijelzo = document.getElementById('kijelzo');
+const ermek = document.querySelectorAll('.erme');
+const bedoboRekesz = document.getElementById('bedobo-rekesz');
 
 function bedob(ertek) {
     if (ertek == 5) {
@@ -50,4 +52,20 @@ drink.addEventListener('click', () => {
         document.querySelector('.cup').style.background = "#999";
         kijelzo.innerText = "0 Ft";
     }
+});
+
+ermek.forEach(erme => {
+    erme.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setData('text/plain', erme.innerText);
+    });
+});
+
+bedoboRekesz.addEventListener('dragover', (e) => {
+    e.preventDefault();
+});
+
+bedoboRekesz.addEventListener('drop', (e) => {
+    e.preventDefault();
+    const ertek = parseInt(e.dataTransfer.getData('text/plain'));
+    bedob(ertek);
 });
