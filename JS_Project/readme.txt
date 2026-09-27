@@ -36,7 +36,7 @@ Dinamikus UI: A választógombok és a Game Over / "New Game" képernyő dinamik
 
 Perzisztencia: A játékállás automatikusan mentésre kerül a böngésző localStorage-ébe, így oldalújratöltés után is zökkenőmentesen folytatható.
 
-Dinamikus Háttér: A beépített óra (Date) alapján este 6 és reggel 6 között automatikusan az esti háttérkép aktiválódik.
+Dinamikus Háttér: A napszaknak megfelelően változik a háttér egy segéd .json fájból napjárás alapján változtatja de van alapértelmezett napszakváltás is reggel 6-tól este 6-ig nappali háttérkép.
 
 Egyedi Névadás: Az állatok elnevezhetők, üres hagyás esetén pedig automatikus alapértelmezett nevet kapnak.
 
