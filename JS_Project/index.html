@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagocsi Vizsga Projekt</title>
+    <link rel="icon" type="image/x-icon" href="img/tamagotchi.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="setup-screen">
+        <div id="pet-selection">
+        <h1>Válassz állatot!</h1>
+        </div>
+        <div id="pet-names" style="display: none;">
+            <h3>Add meg az állat nevét:</h3>
+            <input type="text" id="name"><br>
+            <button id="cancel-name-btn">Mégsem</button>
+            <button id="ok-name-btn">Ok</button>
+        </div>
+    </div>
+
+    <div id="game-screen" style="display: none;">
+        <div id="stats-header">
+            <div id="pet-name">Név</div>
+            <div id="health">Egészség: 100</div>            
+            <div id="age">Kor: 0</div>
+            <div id="weight">Súly: 5</div>
+            <div id="coins">Érmék: <span id="coins-count">10</span></div>
+        </div>
+
+        <div id="time"></div>
+
+        <div id="drink-control">
+            <button onclick="waterFill()">Vizet</button>
+        </div>
+
+        <div id="drink-bowl">
+            <img id="drink-bowl-image" src="img/water_empty.png" alt="Itatótál" onclick="drink();" >
+        </div>
+
+        <div id="pet-display">
+            <img id="pet-image" src="" alt="pet" ondragover="allowDropaction(event)"  ondrop="dropaction(event)">
+        </div>
+
+        <div id="food-bowl">
+            <img id="food-bowl-image" src="img/bowl_empty.png" alt="Etetőtál" onclick="eatFood();" ondragover="allowDrop(event)" ondrop="drop(event)">
+        </div>
+
+        <div id="food-controls">
+            Répa: <span id="carrot-count">10</span>
+                <button id="food-btn" onclick="changeFoodBowl('carrot')" >
+                    <img src="img/carrot.png" alt="Répa" draggable="true" ondragstart="drag(event)">
+                </button>
+                <br>
+            Alma:<span id="apple-count">10</span>
+                <br>
+                <button id="food-btn" onclick="changeFoodBowl('apple')" >
+                    <img src="img/apple.png" alt="Alma" draggable="true" ondragstart="drag(event)">
+                </button>
+            </div>
+
+        <div id="controls">
+            <button onclick="clean()">
+                <img id="clean-image" src="img/sponge.png" alt="Tisztítás" draggable="true" ondragstart="dragaction(event)">
+            </button>
+            <button onclick="play()">
+                <img id="play-image" src="img/ball.png" alt="Játszik"  draggable="true" ondragstart="dragaction(event)">
+            </button>
+            <button onclick="buying()">
+                <img id="buying-image" src="img/food_buy.png" alt="Vásárlás">
+            </button>
+        </div>
+        
+        <div id="liter">
+            <div id="litter-box" onclick="useLitterBox()"></div>
+        </div>
+        
+        <div id="status-bars">
+            <p>Éhség: <span id="hunger">100</span></p>
+            <p>Szomjúság: <span id="thirst">100</span></p>
+            <p>Boldogság: <span id="happiness">100</span></p>
+        </div>
+    </div>
+
+    <script src="tamagotchiGame.js" type="module"></script>
+</body>
+</html>

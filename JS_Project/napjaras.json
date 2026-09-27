@@ -1,0 +1,20 @@
+{
+  "default": {
+    "sunrise": "06:00",
+    "sunset": "18:00"
+  },
+  "monthly": {
+    "1":  { "sunrise": "07:30", "sunset": "16:30" },
+    "2":  { "sunrise": "07:00", "sunset": "17:15" },
+    "3":  { "sunrise": "06:00", "sunset": "18:00" },
+    "4":  { "sunrise": "05:15", "sunset": "19:30" },
+    "5":  { "sunrise": "05:00", "sunset": "20:15" },
+    "6":  { "sunrise": "04:45", "sunset": "20:45" },
+    "7":  { "sunrise": "05:00", "sunset": "20:30" },
+    "8":  { "sunrise": "05:45", "sunset": "19:45" },
+    "9":  { "sunrise": "06:30", "sunset": "18:45" },
+    "10": { "sunrise": "07:15", "sunset": "17:45" },
+    "11": { "sunrise": "07:00", "sunset": "16:30" },
+    "12": { "sunrise": "07:30", "sunset": "16:00" }
+  }
+}
